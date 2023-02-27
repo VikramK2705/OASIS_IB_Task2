@@ -17,10 +17,12 @@ public class TransactionHistory {
                 System.out.println("Enter account number you want to transfer to: ");
                 int acc=scn.nextInt();
                 transaction.add(new Transfer(amount,acc));
+                System.out.println(amount +" has been transferred from your account to "+acc);
                 break;
         }
     }
     public void printHistory(){
+        System.out.println("\n--------------------YOUR TRANSACTION HISTORY-----------------------");
         for(Transaction t:transaction){
             System.out.println(t);
         }

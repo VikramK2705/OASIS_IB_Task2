@@ -40,6 +40,7 @@ class Account{
                        System.out.println("Enter the amount you want to deposit: ");
                        amt=scn.nextInt();
                        transactionHistory.addNewTransaction(1,amt);
+                       System.out.println(amt +" is deposited in your account.");
                        balance=balance+amt;
                        break;
                    case 6:
@@ -53,6 +54,7 @@ class Account{
                        amt=scn.nextInt();
                        balance=balance-amt;
                        transactionHistory.addNewTransaction(2,amt);
+                       System.out.println(amt +" has been withdrew from your account.");
                        break;
                    case 4:
                        System.out.println("\n---------------------------TRANSFER MONEY------------------------");
@@ -63,6 +65,7 @@ class Account{
                        break;
                    case 5:
                        transactionHistory.printHistory();
+                       System.out.println("Current Balance: "+balance);
                        break;
                    default:
                        System.out.println("Invalid Option");
